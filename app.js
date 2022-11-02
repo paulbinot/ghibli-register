@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-// const films = require('./films.json');
+const films = require('./films.json');
 
 const mainRouter = require('./routers/mainRouter');
 
@@ -15,6 +15,10 @@ app.use(express.static("public"));
 //   next();
 // });
 
+app.use((req, res, next) => {
+  res.locals.films = films;
+  next();
+});
 
 app.use(mainRouter);
 

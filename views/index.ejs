@@ -1,12 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Test</h1>
-</body>
-</html>
+<%- include("partials/header.ejs") %>
+
+<main class="page-container">
+  <div class="left">
+    <%- include("partials/menu.ejs") %>
+  </div>
+  <div class="right">
+    <div class="films-grid">
+      <% for( let film of films ) { %>
+        <a href="/films/<%= film.title.replace(/\s/g, '-') %>">
+          <div class="film">
+            <img src="<%= film.image_src %> " alt="<%= film.title %> cover">
+            <div class="infos">
+              <div class="top">
+                <h2><%= film.title %></h2>
+              </div>
+              <div class="bottom">
+                <div class="film__release-date"><%= film.release_date %></div>
+                <div class="film__duration"><%= film.duration %> minutes</div>
+                <button>En SAVOIR +</button>
+              </div>
+            </div>
+          </div>
+        </a>
+      <% } %>
+    </div>
+  </div>
+</main>
+
+
+<%- include("partials/footer.ejs") %>
+
+

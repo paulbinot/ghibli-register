@@ -1,0 +1,10 @@
+<div class="menu-container">
+  <div class="menu-title">
+    All films :
+  </div>
+  <ul class="menu">
+    <% for(const film of films) { %>
+      <a href="/films/<%= film.title.replace(/\s/g, '-') %>"><li><%= film.title %> <span>→</span></li></a>
+    <% } %>
+  </ul>
+</div>
