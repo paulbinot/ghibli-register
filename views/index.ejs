@@ -5,16 +5,9 @@
     <%- include("partials/menu.ejs") %>
   </div>
   <div class="right">
-    <div class="search-container">
-      <div class="search">
-        <form method="GET">
-          <input type="text" name="q" placeholder="Search">
-          <button>Search</button>
-        </form>
-      </div>
-    </div>
+    <%- include("partials/search.ejs") %>
     <div class="films-grid">
-      <% for( let film of films ) { %>
+      <% for( let film of filteredFilms ) { %>
         <a href="/films/<%= film.title.replace(/\s/g, '-') %>">
           <div class="film">
             <img src="<%= film.image_src %> " alt="<%= film.title %> cover">
@@ -24,7 +17,7 @@
               </div>
               <div class="bottom">
                 <div class="film__release-date"><%= film.release_date %></div>
-                <div class="film__duration"><%= film.duration %> minutes</div>
+                <div class="film__duration"><%= film.duration %></div>
                 <button>See more</button>
               </div>
             </div>

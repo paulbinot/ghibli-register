@@ -20,7 +20,6 @@ img {
 button {
   text-transform: uppercase;
   padding: 0.5rem;
-  margin-top: 0.4rem;
   font-family: 'trispace', sans-serif;
   font-weight: 600;
   border: 2px solid rgb(255, 99, 91);
@@ -154,8 +153,24 @@ header span {
 
 .film .infos button {
   width: 100%;
+  margin-top: 1rem;
 }
 
+/* ----------SEARCH---------- */
+.search {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.search input[type=text] {
+  padding: 0.5rem;
+  width: 20rem;
+  border: 2px solid grey;
+}
+
+.search input[type=text]:focus {
+  border: 2px solid red;
+}
 
 /* ----------FILM PAGE---------- */
 
