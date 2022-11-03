@@ -10,7 +10,7 @@ const mainController = {
       res.render("film", {filmData});
     } else {
       res.statusCode = 404;
-      res.send("404 error : film not found");
+      res.render("404page");
     }
   }
 };

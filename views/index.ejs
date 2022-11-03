@@ -5,6 +5,14 @@
     <%- include("partials/menu.ejs") %>
   </div>
   <div class="right">
+    <div class="search-container">
+      <div class="search">
+        <form method="GET">
+          <input type="text" name="q" placeholder="Search">
+          <button>Search</button>
+        </form>
+      </div>
+    </div>
     <div class="films-grid">
       <% for( let film of films ) { %>
         <a href="/films/<%= film.title.replace(/\s/g, '-') %>">
