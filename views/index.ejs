@@ -1,4 +1,4 @@
-<%- include("partials/header.ejs") %>
+<%- include("partials/header.ejs", {title: "Home"}) %>
 
 <main class="page-container">
   <div class="left">
@@ -17,7 +17,7 @@
               <div class="bottom">
                 <div class="film__release-date"><%= film.release_date %></div>
                 <div class="film__duration"><%= film.duration %> minutes</div>
-                <button>En SAVOIR +</button>
+                <button>See more</button>
               </div>
             </div>
           </div>

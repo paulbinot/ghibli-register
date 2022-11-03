@@ -20,12 +20,17 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  res.locals.title = "film";
+  next();
+});
+
 app.use(mainRouter);
 
 // 404
 app.use((req, res) => {
   res.statusCode = 404;
-  res.send("Erreur 404 : page non trouvée");
+  res.render("404page");
 });
 
 app.listen(process.env.PORT);

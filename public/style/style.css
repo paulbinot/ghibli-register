@@ -17,6 +17,27 @@ img {
   max-width: 100%;
 }
 
+button {
+  text-transform: uppercase;
+  padding: 0.5rem;
+  margin-top: 0.4rem;
+  font-family: 'trispace', sans-serif;
+  font-weight: 600;
+  border: 2px solid rgb(255, 99, 91);
+  background-color: rgba(255, 255, 255, 0.071);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(255, 99, 91);
+}
+
+a {
+  text-decoration: none;
+}
+
 /* ----------HEADER---------- */
 header {
   padding: 1.5rem;
@@ -61,7 +82,6 @@ header span {
 }
 
 .menu a:hover {
-  transition: all 0.2s ease-in-out;
   color: rgb(255, 99, 91);
 }
 
@@ -76,6 +96,8 @@ header span {
 /* ----------HOME---------- */
 .page-container {
   display: flex;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .left, .right {
@@ -132,23 +154,117 @@ header span {
 
 .film .infos button {
   width: 100%;
-  text-transform: uppercase;
-  padding: 0.5rem;
-  margin-top: 0.4rem;
+}
+
+
+/* ----------FILM PAGE---------- */
+
+.film-page .right {
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(11,11,11);
+  background: linear-gradient(0deg, rgba(11,11,11,1) 1%, rgba(11,11,11,0) 100%);
+}
+
+.banner img {
+  width: 100%;
+}
+
+.film-infos  {
+  display: flex;
+  font-size: 1.2rem;
+  margin-top: -10rem;
+}
+
+.film-infos__right {
+  width: 40%;
+  padding: 2rem;
+}
+
+.film-infos__left {
+  width: 60%;
+  padding: 2rem;
+}
+
+.film-infos img {
+  width: 100%;
+  border: 4px solid white;
+}
+
+.film-infos__left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.film-infos h2 {
+  font-size: 4rem;
   font-family: 'trispace', sans-serif;
   font-weight: 600;
-  border: 2px solid rgb(255, 99, 91);
-  background-color: rgba(255, 255, 255, 0.071);
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  text-decoration: underline;
+  text-decoration-color: rgb(255, 99, 91);
 }
 
-.film .infos button:hover {
-  background-color: rgb(255, 99, 91);
+.film-infos-full {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'trispace';
 }
 
+.film-infos-full span {
+  color: rgb(149, 149, 149);
+}
 
+/* ----------404---------- */
+.page404 {
+  width: 100%;
+}
+.page404 img {
+  width: 100%;
+  opacity: 85%;
+}
+
+.page404 h2 {
+  font-size: 30rem;
+  font-family: 'trispace', sans-serif;
+  color: rgba(255, 99, 91, 0.487);
+  font-weight: 800;
+}
+
+.page404 h3 {
+  font-weight: 600;
+  font-family: 'trispace', sans-serif;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.content-404 {
+  margin-top: -20rem;
+}
+
+/* ----------FOOTER---------- */
+footer {
+  text-align: center;
+  color: grey;
+  font-family: 'trispace', sans-serif;
+  font-weight: 600;
+  padding: 1rem 1rem 2rem 1rem;
+}
 
 
 

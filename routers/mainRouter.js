@@ -6,5 +6,6 @@ const mainRouter = express.Router();
 
 // Routes
 mainRouter.get('/', mainController.renderHomePage);
+mainRouter.get('/films/:filmName', mainController.renderFilmPage);
 
 module.exports = mainRouter;
