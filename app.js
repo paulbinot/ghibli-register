@@ -20,7 +20,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
+app.use((req, res, next) => { // For no header bug
   res.locals.title = "film";
   next();
 });
