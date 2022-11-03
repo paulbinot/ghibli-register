@@ -14,7 +14,6 @@ function minutesToHHMM(minutes) {
 
 const durations = document.querySelectorAll(".film__duration");
 
-
 durations.forEach(duration => {
   const newDuration = minutesToHHMM(duration.textContent);
   duration.textContent = newDuration;

@@ -14,7 +14,7 @@
         <h2><%= filmData.title %></h2>
         <div class="film-infos-full">
           <div class="original-title"><span>Original title : </span> <%= filmData.original_title %></div>
-          <div class="duration"><span>Duration : </span><%= filmData.duration %> minutes</div>
+          <div><span>Duration : </span><span class="duration"><%= filmData.duration %></span></div>
           <div class="release-date"><span>Release date : </span><%= filmData.release_date %></div>
           <div class="director"><span>Director :</span> <%= filmData.director %></div>
         </div>
@@ -29,5 +29,6 @@
 
   </div>
 </main>
+<script src="/js/film.js"></script>
 
 <%- include("partials/footer.ejs") %>
