@@ -3,6 +3,7 @@ const express = require('express');
 const films = require('./films.json');
 
 const mainRouter = require('./routers/mainRouter');
+const PORT = process.env.PORT ?? 3000;
 
 const app = express();
 app.set("view engine", "ejs");
@@ -33,4 +34,4 @@ app.use((req, res) => {
   res.render("404page");
 });
 
-app.listen(process.env.PORT);
+app.listen(PORT);
